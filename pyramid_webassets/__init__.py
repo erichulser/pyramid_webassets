@@ -96,7 +96,7 @@ class PyramidResolver(Resolver):
         if request is not None:
             for attempt in (filepath, item):
                 try:
-                    return request.static_url(attempt)
+                    return request.static_path(attempt)
                 except ValueError:
                     pass
 
@@ -151,7 +151,7 @@ class PyramidResolver(Resolver):
         if request is not None:
             for attempt in (filepath, item):
                 try:
-                    return request.static_url(item)
+                    return request.static_path(item)
                 except ValueError:
                     pass
 
